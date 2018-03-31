@@ -1,0 +1,280 @@
+// В этом файле должны быть стили для БЭМ-блока footer, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.footer {
+  background-color: #f8f8f8;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: $gray-light;
+    position: relative;
+    bottom: 65px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__block-main {
+    display: flex;
+    justify-content: space-between;
+    padding: 75px 0 0 0;
+  }
+
+  &__block {
+    margin: 0 15px 0 0;
+
+    &_info {
+      min-width: 480px;
+    }
+
+    &_blogs {
+      min-width: 340px;
+    }
+
+    &_instagram {
+      min-width: 270px;
+    }
+  }
+
+  &__logo {
+    font-family: $font-family_second;
+    font-size: rem(46px);
+    font-weight: 700;
+    color: #cccccc;
+    margin: 0 0 50px 0;
+  }
+
+  &__description {
+    font-size: rem(15px);
+    color: $gray;
+    margin: 0 0 55px 0;
+  }
+
+  &__title-followers {
+    font-family: $font-family_second;
+    color: $black;
+    font-size: rem(14px);
+
+    &:before {
+      content: '15k';
+      font-family: $font-family_second;
+      font-size: rem(18px);
+      font-weight: 700;
+      margin: 0 5px 0 0;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      height: 1px;
+      width: 100%;
+      background-color: $gray-light;
+      margin: 20px 0;
+    }
+  }
+
+  &__block-links {
+    display: flex;
+  }
+
+  &__text {
+    font-size: rem(15px);
+    font-weight: 300;
+    font-style: italic;
+    color: $gray;
+  }
+
+  &__icon {
+    font-family: $font-family_icons;
+    font-size: rem(17px);
+    color: $color-secondary;
+    margin: 0 20px 0 0;
+    cursor: pointer;
+
+    &_facebook {
+      margin: 0 20px;
+
+      &::before {
+        content: '\f09a';
+      }
+    }
+
+    &_twitter {
+
+      &::before {
+        content: '\f099';
+      }
+    }
+
+    &_instagram {
+
+      &::before {
+        content: '\f16d';
+      }
+    }
+
+    &_pinterest {
+
+      &::before {
+        content: '\f231';
+      }
+    }
+
+    &_google {
+
+      &::before {
+        content: '\f0d5';
+      }
+    }
+
+    &_youtube {
+
+      &::before {
+        content: '\f16a';
+      }
+    }
+
+    &_dribbble {
+
+      &::before {
+        content: '\f17d';
+      }
+    }
+
+    &_tumblr {
+
+      &::before {
+        content: '\f173';
+      }
+    }
+  }
+
+  &__input {
+    width: 190px;
+    height: 40px;
+    padding: 0 10px;
+    margin: 40px 0 0 0;
+    border: 1px solid $gray-light;
+    color: $gray-light;
+    font-size: rem(15px);
+    font-weight: 300;
+    font-style: italic;
+
+    ::-webkit-input-placeholder {
+      color: $gray-light;
+      font-size: rem(15px);
+      font-weight: 300;
+      font-style: italic;
+    }
+
+    ::-moz-placeholder {
+      color: $gray-light;
+      font-size: rem(15px);
+      font-weight: 300;
+      font-style: italic;
+    }/* Firefox 19+ */
+
+    :-moz-placeholder {
+      color: $gray-light;
+      font-size: rem(15px);
+      font-weight: 300;
+      font-style: italic;
+    }/* Firefox 18- */
+
+    :-ms-input-placeholder {
+      color: $gray-light;
+      font-size: rem(15px);
+      font-weight: 300;
+      font-style: italic;
+    }
+  }
+
+  &__button {
+    width: 150px;
+    height: 40px;
+    background-color: $color-secondary;
+    color: $white;
+    font-family: $font-family_second;
+    font-size: rem(14px);
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+  }
+
+  &__title-main {
+    font-family: $font-family_second;
+    color: $black;
+    font-size: rem(14px);
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0 0 40px 0;
+  }
+
+  &__article {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 30px 0 0 0;
+  }
+
+  &__img {
+    margin: 0 20px 0 0;
+  }
+
+  &__title-article {
+    font-family: $font-family_second;
+    font-size: rem(12px);
+    color: $black;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 0 0 15px 0;
+  }
+
+  &__date {
+    font-size: rem(13px);
+    font-weight: 300;
+    font-style: italic;
+    color: $gray;
+  }
+
+  &__photos {
+    margin: 40px 0 20px 0;
+  }
+
+  &__img-instagram {
+    margin: 0 2px 0 0;
+  }
+
+  &__link {
+    font-size: rem(13px);
+    font-weight: 300;
+    font-style: italic;
+    color: $gray;
+    cursor: pointer;
+  }
+
+  &__copyright {
+    display: flex;
+    justify-content: center;
+    font-family: $font-family_second;
+    font-weight: 600;
+    font-size: rem(14px);
+    color: $black;
+    padding: 25px 0;
+    margin: 70px 0 0 0;
+    //border-top: 1px solid $gray-light;
+
+    &:after {
+      content: 'Laaqiq';
+      color: $color-primary;
+      margin: 0 0 0 5px;
+    }
+  }
+}

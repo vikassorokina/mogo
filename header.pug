@@ -1,0 +1,36 @@
+//- Все примеси в этом файле должны начинаться c имени блока (header)
+
+mixin header(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +header('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' header_' + modsList[i].trim();
+      }
+    }
+
+  +b.header(class=allMods)&attributes(attributes)
+    .container
+      +e.blocks
+        +e.logo MoGo
+        +e.NAV.nav
+          +e.A.nav-item About
+          +e.A.nav-item Service
+          +e.A.nav-item Work
+          +e.A.nav-item Blog
+          +e.A.nav-item Contact
+        +e.block-buttons
+          +e.A.link-cart
+            +e.I.cart
+          +e.FORM.search
+            +e.INPUT.input(type='text' placeholder='Search...')
+            +e.BUTTON.button(type='submit')

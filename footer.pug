@@ -1,0 +1,72 @@
+//- Все примеси в этом файле должны начинаться c имени блока (footer)
+
+mixin footer(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +footer('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' footer_' + modsList[i].trim();
+      }
+    }
+  +b.footer(class=allMods)&attributes(attributes)
+    .container
+      +e.block-main
+         +e.block_info
+           +e.logo MoGo
+           +e.description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+           +e.followers
+             +e.title-followers followers
+             +e.block-links
+              +e.text Follow Us:
+              +e.icons
+                +e.A.icon_facebook
+                +e.A.icon_twitter
+                +e.A.icon_instagram
+                +e.A.icon_pinterest
+                +e.A.icon_google
+                +e.A.icon_youtube
+                +e.A.icon_dribbble
+                +e.A.icon_tumblr
+           +e.FORM.form
+            +e.INPUT.input(type='text' placeholder='Your Email...')
+            +e.BUTTON.button subscribe
+         +e.block_blogs
+            +e.title-main blogs
+            +e.article
+              +e.IMG.img(src='img/img-footer-blogs-1.png')
+              +e.info
+                +e.title-article Lorem ipsum dolor sit amet, consectetur adipiscing
+                +e.date Jan 9, 2016
+            +e.article
+             +e.IMG.img(src='img/img-footer-blogs-2.png')
+             +e.info
+                +e.title-article Consectetur adipiscing elit, sed do eiusmod tempor
+                +e.date Jan 9, 2016
+            +e.article
+              +e.IMG.img(src='img/img-footer-blogs-3.png')
+              +e.info
+                +e.title-article sed do eiusmod tempor incididunt ut labore
+                +e.date Jan 9, 2016
+         +e.block_instagram
+           +e.title-main Instagram
+           +e.photos
+             +e.IMG.img-instagram(src='img/img-footer-instagram-1.png')
+             +e.IMG.img-instagram(src='img/img-footer-instagram-2.png')
+             +e.IMG.img-instagram(src='img/img-footer-instagram-3.png')
+             +e.IMG.img-instagram(src='img/img-footer-instagram-4.png')
+             +e.IMG.img-instagram(src='img/img-footer-instagram-5.png')
+             +e.IMG.img-instagram(src='img/img-footer-instagram-6.png')
+             +e.IMG.img-instagram(src='img/img-footer-instagram-7.png')
+             +e.IMG.img-instagram(src='img/img-footer-instagram-8.png')
+             +e.IMG.img-instagram(src='img/img-footer-instagram-9.png')
+           +e.A.link View more photos
+      +e.copyright © 2016 MoGo free PSD template by

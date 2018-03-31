@@ -1,0 +1,187 @@
+// В этом файле должны быть стили для БЭМ-блока header, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.header {
+
+  &__blocks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    height: 30px;
+    color: $white;
+  }
+
+  &__logo {
+    font-family: $font-family_second;
+    font-size: rem(30px);
+    font-weight: 700;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    left: 220px;
+    font-family: $font-family_second;
+    font-size: rem(14px);
+    text-transform: uppercase;
+  }
+
+  &__nav-item {
+    margin: 0 55px 0 0;
+    box-sizing: border-box;
+    color: $white;
+    position: relative;
+    text-decoration: none;
+
+    &:hover {
+      color: $yellow;
+    }
+
+    &:before {
+      display: block;
+      position: absolute;
+      content: '';
+      height: 3px;
+      width: 0;
+      background: $yellow;
+      transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+      left: 50%;
+      top: 25px;
+    }
+
+    &:after {
+      display: block;
+      position: absolute;
+      content: '';
+      height: 3px;
+      width: 0;
+      background-color: $yellow;
+      transition: width 0.3s ease-in-out;
+      left: 50%;
+      top: 25px;
+    }
+
+    &:hover:before {
+      width: 50%;
+      left: 0;
+    }
+
+    &:hover:after {
+      width: 50%;
+    }
+  }
+
+  &__block-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__cart {
+    font-family: $font-family_icons;
+    font-size: rem(15px);
+    margin: 0 45px 0 0;
+    transition: $transition-slow;
+    color: $white;
+
+    &:before {
+      content: '\f07a';
+    }
+
+    &:hover {
+      color: $yellow;
+    }
+  }
+
+  &__input {
+    height: 100%;
+    width: 0;
+    padding: 0 42px 0 15px;
+    border: none;
+    border-bottom: 2px solid transparent;
+    outline: none;
+    background: transparent;
+    transition: 0.4s cubic-bezier(0, 0.8, 0, 1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+
+    &:focus {
+      width: 300px;
+      z-index: 1;
+      border-bottom: 2px solid $white;
+      margin: 50px 0 0 0;
+      outline: none;
+
+      &::-webkit-input-placeholder {
+        color: $white;
+        font-size: rem(15px);
+        font-weight: 300;
+        font-style: italic;
+      }
+
+      &::-moz-placeholder {
+        color: $white;
+        font-size: rem(15px);
+        font-weight: 300;
+        font-style: italic;
+      }/* Firefox 19+ */
+
+      &:-moz-placeholder {
+        color: $white;
+        font-size: rem(15px);
+        font-weight: 300;
+        font-style: italic;
+      }/* Firefox 18- */
+
+      &:-ms-input-placeholder {
+        color: $white;
+        font-size: rem(15px);
+        font-weight: 300;
+        font-style: italic;
+      }
+    }
+  }
+
+  &__button {
+    background: none;
+    border: none;
+    //height: 42px;
+    //width: 42px;
+    //position: absolute;
+    //top: 0;
+    //right: 0;
+
+    &:hover {
+      color: $yellow;
+    }
+
+    &:before {
+      content: '\f002';
+      font-family: FontAwesome;
+      font-size: 16px;
+      color: $white;
+      cursor: pointer;
+    }
+  }
+
+  // &__search {
+  //   font-family: $font-family_icons;
+  //   font-size: rem(15px);
+  //   transition: $transition-slow;
+
+  //   &:before {
+  //     content: '\f002';
+  //   }
+
+  //   &:hover {
+  //     color: $yellow;
+  //   }
+  // }
+}
