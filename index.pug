@@ -1,0 +1,172 @@
+extends ../layouts/layout.pug
+
+block meta
+  title Главная
+  meta(name='description', content='')
+
+//- block append head
+//-   link(rel='stylesheet', href='css/some.css')
+
+block content
+  +b.SECTION.welcome
+    .container
+      +e.blocks
+        +e.block-title
+          +b.title_first Creative Template
+          +b.title_second Welcome to MoGo
+        +e.block-button Learn more
+        +e.NAV.list-down-nav
+          +e.item-block_first
+            +e.line
+            +e.item_first Intro
+          +e.item-block_second
+            +e.line
+            +e.item_second Work
+          +e.item-block_third
+            +e.line
+            +e.item_third About
+          +e.item-block_fourth
+            +e.line
+            +e.item_fourth Contacts
+  +b.SECTION.about
+      .container
+        +e.blocks
+          +e.block-title
+            +b.title_first What we do
+            +b.title_second Story about us
+            +b.title_subtitle Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          +e.block-photos
+            +e.IMG.img(src='img/img-about-1.png')
+            +e.IMG.img(src='img/img-about-2.png')
+            +e.IMG.img(src='img/img-about-3.png')
+  +b.SECTION.counter
+    .container
+      +e.list
+        +e.item
+          +e.item_number 42
+          +e.item_text web design projects
+        +e.item
+          +e.item_number 123
+          +e.item_text happy client
+        +e.item
+          +e.item_number 15
+          +e.item_text award winner
+        +e.item
+          +e.item_number 99
+          +e.item_text cup of coffe
+        +e.item_fourth
+          +e.item_number 24
+          +e.item_text members
+  +b.SECTION.services
+      .container
+        +e.blocks
+          +e.block-title
+            +b.title_first We work with
+            +b.title_second amazing services
+          +e.list
+            +e.row_first
+              +e.item-block
+                +e.IMG.item-icon(src='img/icon-services-clock.png')
+                +e.item-info
+                  +e.title photography
+                  +e.description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+              +e.item-block
+                +e.IMG.item-icon(src='img/icon-services-graphic.png')
+                +e.item-info
+                  +e.title web design
+                  +e.description Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+              +e.item-block
+                +e.IMG.item-icon(src='img/icon-services-computer.png')
+                +e.item-info
+                  +e.title creativity
+                  +e.description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+            +e.row
+              +e.item-block
+                +e.IMG.item-icon(src='img/icon-services-book.png')
+                +e.item-info
+                  +e.title seo
+                  +e.description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+              +e.item-block
+                +e.IMG.item-icon(src='img/icon-services-home.png')
+                +e.item-info
+                  +e.title css/html
+                  +e.description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+              +e.item-block
+                +e.IMG.item-icon(src='img/icon-services-digital.png')
+                +e.item-info
+                  +e.title digital
+                  +e.description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+  +b.SECTION.design
+      .container
+        +e.blocks
+          +e.block-title
+            +b.title_first For all devices
+            +b.title_second unique design
+        +e.IMG.tablet(src='img/img-design-tablet.png')
+        +e.IMG.iphone(src='img/img-design-iphone.png')
+  +b.SECTION.do
+      .container
+        +e.block-title
+          +b.title_first Service
+          +b.title_second what we do
+          +b.title_subtitle Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        +e.blocks
+          +e.IMG.img(src='img/img-do.png')
+          +e.UL.accordion(uk-accordion='collapsible: false')
+            +e.LI.item
+              +e.A.uk-accordion-title(class='uk-accordion-title')
+                +e.info
+                  +e.IMG.icon(src='img/icon-do-picture.png')
+                  +e.title photography
+              +e.uk-accordion-content(class='uk-accordion-content') Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            +e.LI.item
+              +e.A.uk-accordion-title(class='uk-accordion-title')
+                +e.info
+                  +e.IMG.icon(src='img/icon-do-equalizer.png')
+                  +e.title creativity
+              +e.uk-accordion-content(class='uk-accordion-content') Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            +e.LI.item
+              +e.A.uk-accordion-title(class='uk-accordion-title')
+                +e.info
+                  +e.IMG.icon(src='img/icon-do-target.png')
+                  +e.title web design
+              +e.uk-accordion-content(class='uk-accordion-content') Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  +b.SECTION.blog
+      .container
+        +e.block-title
+          +b.title_first Our stories
+          +b.title_second lastest blog
+        +e.blocks
+          +e.block
+            +e.photo
+              +e.IMG.img(src='img/img-blog-1.png')
+              +e.date 15
+            +e.info
+              +e.title Lorem ipsum dolor sit amet
+              +e.description Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              +e.labels
+                +e.views 542
+                +e.comments 17
+          +e.block
+            +e.photo
+              +e.IMG.img(src='img/img-blog-2.png')
+              +e.date 14
+            +e.info
+              +e.title sed do eiusmod tempor
+              +e.description Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              +e.labels
+                +e.views 992
+                +e.comments 42
+          +e.block
+            +e.photo
+              +e.IMG.img(src='img/img-blog-3.png')
+              +e.date 12
+            +e.info
+              +e.title incididunt ut labore et dolore
+              +e.description Elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              +e.labels
+                +e.views 1560
+                +e.comments 98
+  +b.SECTION.map
+      .container
+        +e.A.text open map
